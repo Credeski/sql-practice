@@ -25,4 +25,6 @@ VALUES
     (4, 'Project Manager', 'Remote', 90000);
 
 
-
+INSERT INTO companies (name, industry)
+VALUES
+    ('Tech Cabal', 'Media');

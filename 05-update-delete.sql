@@ -8,3 +8,7 @@ SET region = CASE
     WHEN id IN (5) THEN 'North America'
     ELSE 'Unknown'
     END;
+
+
+DELETE FROM companies
+WHERE industry = 'Media';
