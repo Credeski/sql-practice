@@ -9,6 +9,9 @@ SET region = CASE
     ELSE 'Unknown'
     END;
 
+UPDATE jobs
+SET title = 'Frontend Developer'
+WHERE title = 'Marketing Specialist';
 
 DELETE FROM companies
 WHERE industry = 'Media';
