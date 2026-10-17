@@ -24,3 +24,20 @@ ORDER BY salary DESC;
 SELECT * FROM jobs
 ORDER BY salary DESC
 LIMIT 5;
+
+-- Calculate the total, average, minimum, and maximum salary of all jobs in the database.
+SELECT SUM(salary) AS total_salary, AVG(salary) AS average_salary, MIN(salary) AS minimum_salary, MAX(salary) AS maximum_salary
+FROM jobs;
+
+-- Count jobs per company and order by company_id.
+SELECT company_id, COUNT(*)
+FROM jobs
+GROUP BY company_id
+ORDER BY company_id;
+
+-- Find companies with more than one job posting and order by company_id.
+SELECT company_id, COUNT(*)
+FROM jobs
+GROUP BY company_id
+HAVING COUNT(*) > 1
+ORDER BY company_id;
