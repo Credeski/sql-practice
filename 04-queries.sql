@@ -16,5 +16,11 @@ WHERE salary BETWEEN 65000 AND 75000 AND location = 'Remote';
 SELECT * FROM jobs 
 WHERE location NOT IN ('Remote', 'New York') AND salary > 70000;
 
+-- View all jobs from highest to lowest salary.
 SELECT * FROM jobs
 ORDER BY salary DESC;
+
+-- View the top 5 highest paying jobs.
+SELECT * FROM jobs
+ORDER BY salary DESC
+LIMIT 5;
