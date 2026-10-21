@@ -41,3 +41,8 @@ FROM jobs
 GROUP BY company_id
 HAVING COUNT(*) > 1
 ORDER BY company_id;
+
+-- Show companies and their jobs by joining the companies and jobs tables.
+SELECT name, title
+FROM companies
+JOIN jobs ON companies.id = jobs.company_id;
